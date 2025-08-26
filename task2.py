@@ -1,0 +1,15 @@
+s=str(input("Enter text to write to the file: "))
+file=open('output.txt','w')
+writing=file.write(s)
+file.close()
+print("Data successfully written to output.txt")
+
+k=str(input("Enter additional text to append: "))
+file=open('output.txt','a')
+appending=file.write(f'\n{k}')
+file.close()
+
+file=open('output.txt','r')
+read=file.read()
+print(read)
+file.close()
